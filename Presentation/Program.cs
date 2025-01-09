@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Presentation.App;
 
 namespace Presentation
 {
@@ -14,6 +15,8 @@ namespace Presentation
         [STAThread]
         static void Main()
         {
+            IFIN.Bootstrap();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run();

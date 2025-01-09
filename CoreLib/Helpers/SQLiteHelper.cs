@@ -7,7 +7,7 @@ using Dapper;
 
 namespace CoreLib.Helpers
 {
-    public static class DbHelper
+    public static class SQLiteHelper
     {
         public static string GetDbFilePath()
         {

@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Extensions.DependencyInjection;
+using CoreLib.Helpers;
+using Dapper;
 
 namespace Presentation.App
 {
@@ -13,12 +12,32 @@ namespace Presentation.App
 
         public static void Bootstrap()
         {
-            _SetupSQLite();
+            setupSQLite();
         }
 
-        private static void _SetupSQLite()
+        private static void setupSQLite()
         {
-            throw new NotImplementedException();
+            SQLiteHelper.CreateDbIfNotExist();
+
+            SQLiteHelper.RunScript(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "App/Sql/CREATE_TABLE_IF_NOT_EXISTS.sql"));
+
+            // INSERT DATA FOR LV2TYPE IF NOT EXISTS
+            bool isTableLv2TypeHasData = false;
+            using (var conn = SQLiteHelper.NewConnection())
+                isTableLv2TypeHasData = conn.Query("SELECT * FROM LV2TYPE LIMIT 1").Count() > 0;
+
+            if (!isTableLv2TypeHasData)
+                SQLiteHelper.RunScript(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "App/Sql/INSERT_LV2TYPE.sql"));
+
+#if DEBUG
+            // INSERT DATA FOR TICKET IF NOT EXISTS (DEV ONLY)
+            bool isTableTicketHasData = false;
+            using (var conn = SQLiteHelper.NewConnection())
+                isTableTicketHasData = conn.Query("SELECT * FROM TICKET LIMIT 1").Count() > 0;
+
+            if (isTableTicketHasData)
+                SQLiteHelper.RunScript(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "App/Sql/INSERT_TICKET.sql"));
+#endif
         }
     }
 }
