@@ -97,9 +97,17 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <ProjectReference Include="..\Business\Business.csproj">
+      <Project>{657fd262-31ac-4ace-9585-9f695a153ead}</Project>
+      <Name>Business</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CoreLib\CoreLib.csproj">
       <Project>{cf82c19d-06a5-4bff-ac9d-8f875d491c82}</Project>
       <Name>CoreLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{c80e2212-1986-4d4a-b9ac-511a720e9b0f}</Project>
+      <Name>DataAccess</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
