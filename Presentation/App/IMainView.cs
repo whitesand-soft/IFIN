@@ -5,7 +5,7 @@ namespace Presentation.App
 {
     public interface IMainView
     {
-        MainPresenter Presenter { set; }
+        MainPresenter Presenter { get; }
 
         event EventHandler<MENU> OpenMenuEvent;
 

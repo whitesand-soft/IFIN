@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Presentation.App;
 
@@ -19,7 +16,9 @@ namespace Presentation
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run();
+            var mv = new MainView();
+            mv.Presenter = new MainPresenter(mv);
+            Application.Run(mv);
         }
     }
 }
