@@ -30,25 +30,25 @@
         {
             this.components = new System.ComponentModel.Container();
             this.fluentDesignFormContainer1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
+            this.body_PanelControl = new DevExpress.XtraEditors.PanelControl();
+            this.screens_XtraTabControl = new DevExpress.XtraTab.XtraTabControl();
+            this.footer_PanelControl = new DevExpress.XtraEditors.PanelControl();
+            this.header_PanelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.dashboard_AccordionControlElement = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
-            this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
             this.ticket_AccordionControlElement = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.setting_AccordionControlElement = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.header_PanelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.body_PanelControl = new DevExpress.XtraEditors.PanelControl();
-            this.footer_PanelControl = new DevExpress.XtraEditors.PanelControl();
-            this.screens_XtraTabControl = new DevExpress.XtraTab.XtraTabControl();
+            this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
+            this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
             this.fluentDesignFormContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.body_PanelControl)).BeginInit();
+            this.body_PanelControl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.screens_XtraTabControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.footer_PanelControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.header_PanelControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.header_PanelControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.body_PanelControl)).BeginInit();
-            this.body_PanelControl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.footer_PanelControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.screens_XtraTabControl)).BeginInit();
             this.SuspendLayout();
             // 
             // fluentDesignFormContainer1
@@ -61,6 +61,39 @@
             this.fluentDesignFormContainer1.Name = "fluentDesignFormContainer1";
             this.fluentDesignFormContainer1.Size = new System.Drawing.Size(638, 568);
             this.fluentDesignFormContainer1.TabIndex = 0;
+            // 
+            // body_PanelControl
+            // 
+            this.body_PanelControl.Controls.Add(this.screens_XtraTabControl);
+            this.body_PanelControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.body_PanelControl.Location = new System.Drawing.Point(0, 40);
+            this.body_PanelControl.Name = "body_PanelControl";
+            this.body_PanelControl.Size = new System.Drawing.Size(638, 488);
+            this.body_PanelControl.TabIndex = 1;
+            // 
+            // screens_XtraTabControl
+            // 
+            this.screens_XtraTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.screens_XtraTabControl.Location = new System.Drawing.Point(2, 2);
+            this.screens_XtraTabControl.Name = "screens_XtraTabControl";
+            this.screens_XtraTabControl.Size = new System.Drawing.Size(634, 484);
+            this.screens_XtraTabControl.TabIndex = 0;
+            // 
+            // footer_PanelControl
+            // 
+            this.footer_PanelControl.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.footer_PanelControl.Location = new System.Drawing.Point(0, 528);
+            this.footer_PanelControl.Name = "footer_PanelControl";
+            this.footer_PanelControl.Size = new System.Drawing.Size(638, 40);
+            this.footer_PanelControl.TabIndex = 2;
+            // 
+            // header_PanelControl1
+            // 
+            this.header_PanelControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.header_PanelControl1.Location = new System.Drawing.Point(0, 0);
+            this.header_PanelControl1.Name = "header_PanelControl1";
+            this.header_PanelControl1.Size = new System.Drawing.Size(638, 40);
+            this.header_PanelControl1.TabIndex = 0;
             // 
             // accordionControl1
             // 
@@ -87,6 +120,18 @@
             this.dashboard_AccordionControlElement.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.dashboard_AccordionControlElement.Text = "Dashboard";
             // 
+            // ticket_AccordionControlElement
+            // 
+            this.ticket_AccordionControlElement.Name = "ticket_AccordionControlElement";
+            this.ticket_AccordionControlElement.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.ticket_AccordionControlElement.Text = "Ticket";
+            // 
+            // setting_AccordionControlElement
+            // 
+            this.setting_AccordionControlElement.Name = "setting_AccordionControlElement";
+            this.setting_AccordionControlElement.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.setting_AccordionControlElement.Text = "Setting";
+            // 
             // fluentDesignFormControl1
             // 
             this.fluentDesignFormControl1.FluentDesignForm = this;
@@ -100,51 +145,6 @@
             // fluentFormDefaultManager1
             // 
             this.fluentFormDefaultManager1.Form = this;
-            // 
-            // ticket_AccordionControlElement
-            // 
-            this.ticket_AccordionControlElement.Name = "ticket_AccordionControlElement";
-            this.ticket_AccordionControlElement.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.ticket_AccordionControlElement.Text = "Ticket";
-            // 
-            // setting_AccordionControlElement
-            // 
-            this.setting_AccordionControlElement.Name = "setting_AccordionControlElement";
-            this.setting_AccordionControlElement.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.setting_AccordionControlElement.Text = "Setting";
-            // 
-            // header_PanelControl1
-            // 
-            this.header_PanelControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.header_PanelControl1.Location = new System.Drawing.Point(0, 0);
-            this.header_PanelControl1.Name = "header_PanelControl1";
-            this.header_PanelControl1.Size = new System.Drawing.Size(638, 40);
-            this.header_PanelControl1.TabIndex = 0;
-            // 
-            // body_PanelControl
-            // 
-            this.body_PanelControl.Controls.Add(this.screens_XtraTabControl);
-            this.body_PanelControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.body_PanelControl.Location = new System.Drawing.Point(0, 40);
-            this.body_PanelControl.Name = "body_PanelControl";
-            this.body_PanelControl.Size = new System.Drawing.Size(638, 488);
-            this.body_PanelControl.TabIndex = 1;
-            // 
-            // footer_PanelControl
-            // 
-            this.footer_PanelControl.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.footer_PanelControl.Location = new System.Drawing.Point(0, 528);
-            this.footer_PanelControl.Name = "footer_PanelControl";
-            this.footer_PanelControl.Size = new System.Drawing.Size(638, 40);
-            this.footer_PanelControl.TabIndex = 2;
-            // 
-            // screens_XtraTabControl
-            // 
-            this.screens_XtraTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.screens_XtraTabControl.Location = new System.Drawing.Point(2, 2);
-            this.screens_XtraTabControl.Name = "screens_XtraTabControl";
-            this.screens_XtraTabControl.Size = new System.Drawing.Size(634, 484);
-            this.screens_XtraTabControl.TabIndex = 0;
             // 
             // MainView
             // 
@@ -160,14 +160,14 @@
             this.NavigationControl = this.accordionControl1;
             this.Text = "IFIN";
             this.fluentDesignFormContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.body_PanelControl)).EndInit();
+            this.body_PanelControl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.screens_XtraTabControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.footer_PanelControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.header_PanelControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.header_PanelControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.body_PanelControl)).EndInit();
-            this.body_PanelControl.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.footer_PanelControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.screens_XtraTabControl)).EndInit();
             this.ResumeLayout(false);
 
         }

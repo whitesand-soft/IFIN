@@ -1,8 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using Business.Dashboard;
+using Business.Setting;
+using Business.Ticket;
 using DevExpress.XtraTab;
+using Microsoft.Extensions.DependencyInjection;
 using Presentation.Properties;
+using Presentation.Views.Dashboard;
+using Presentation.Views.Setting;
+using Presentation.Views.Ticket;
 using static Presentation.Common.UICommon;
 
 namespace Presentation.App
@@ -12,6 +19,10 @@ namespace Presentation.App
         public MainView()
         {
             InitializeComponent();
+
+            dashboard_AccordionControlElement.Click += (s, e) => OpenMenuEvent?.Invoke(this, MENU.DASHBOARD);
+            ticket_AccordionControlElement.Click += (s, e) => OpenMenuEvent?.Invoke(this, MENU.TICKET);
+            setting_AccordionControlElement.Click += (s, e) => OpenMenuEvent?.Invoke(this, MENU.SETTING);
         }
 
         #region IMainView
@@ -40,7 +51,7 @@ namespace Presentation.App
         }
         #endregion
 
-        #region private methods
+        #region Private Methods
         private string _GetTabCaption(MENU menu)
         {
             switch (menu)
@@ -63,10 +74,16 @@ namespace Presentation.App
             switch (menu)
             {
                 case MENU.DASHBOARD:
+                    control = new DashboardView();
+                    ((IDashboardView)control).Presenter = new DashboardPresenter((IDashboardView)control, IFIN.ServiceProvider.GetRequiredService<IDashboardBLL>());
                     break;
                 case MENU.TICKET:
+                    control = new TicketView();
+                    ((ITicketView)control).Presenter = new TicketPresenter((ITicketView)control, IFIN.ServiceProvider.GetRequiredService<ITicketBLL>());
                     break;
                 case MENU.SETTING:
+                    control = new SettingView();
+                    ((ISettingView)control).Presenter = new SettingPresenter((ISettingView)control, IFIN.ServiceProvider.GetRequiredService<ISettingBLL>());
                     break;
                 default:
                     break;

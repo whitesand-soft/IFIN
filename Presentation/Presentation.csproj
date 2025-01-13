@@ -88,6 +88,30 @@
     <Compile Include="Common\UICommon.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Dashboard\DashboardPresenter.cs" />
+    <Compile Include="Views\Dashboard\DashboardView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Dashboard\DashboardView.Designer.cs">
+      <DependentUpon>DashboardView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Dashboard\IDashboardView.cs" />
+    <Compile Include="Views\Setting\ISettingView.cs" />
+    <Compile Include="Views\Setting\SettingPresenter.cs" />
+    <Compile Include="Views\Setting\SettingView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Setting\SettingView.Designer.cs">
+      <DependentUpon>SettingView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Ticket\ITicketView.cs" />
+    <Compile Include="Views\Ticket\TicketPresenter.cs" />
+    <Compile Include="Views\Ticket\TicketView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Ticket\TicketView.Designer.cs">
+      <DependentUpon>TicketView.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="App\MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
     </EmbeddedResource>
@@ -101,6 +125,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Views\Dashboard\DashboardView.resx">
+      <DependentUpon>DashboardView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Setting\SettingView.resx">
+      <DependentUpon>SettingView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Ticket\TicketView.resx">
+      <DependentUpon>TicketView.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
