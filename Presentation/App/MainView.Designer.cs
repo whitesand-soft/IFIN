@@ -73,11 +73,17 @@
             // 
             // screens_XtraTabControl
             // 
+            this.screens_XtraTabControl.AllowDrop = true;
+            this.screens_XtraTabControl.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InAllTabPageHeaders;
             this.screens_XtraTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.screens_XtraTabControl.Location = new System.Drawing.Point(2, 2);
             this.screens_XtraTabControl.Name = "screens_XtraTabControl";
             this.screens_XtraTabControl.Size = new System.Drawing.Size(634, 484);
             this.screens_XtraTabControl.TabIndex = 0;
+            this.screens_XtraTabControl.CloseButtonClick += new System.EventHandler(this.screens_XtraTabControl_CloseButtonClick);
+            this.screens_XtraTabControl.DragOver += new System.Windows.Forms.DragEventHandler(this.screens_XtraTabControl_DragOver);
+            this.screens_XtraTabControl.MouseDown += new System.Windows.Forms.MouseEventHandler(this.screens_XtraTabControl_MouseDown);
+            this.screens_XtraTabControl.MouseMove += new System.Windows.Forms.MouseEventHandler(this.screens_XtraTabControl_MouseMove);
             // 
             // footer_PanelControl
             // 
